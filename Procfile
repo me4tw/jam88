@@ -1,1 +1,1 @@
-web: sleep 3 && ./app $PORT
+web: vendor/bin/heroku-php-nginx
