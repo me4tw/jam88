@@ -1,1 +1,1 @@
-web: bundle exec app $PORT
+web: find / -name *app*
