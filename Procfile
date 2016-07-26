@@ -1,1 +1,1 @@
-web: find / -name *app*
+web: echo TESTLOGGING
