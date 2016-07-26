@@ -186,12 +186,22 @@ int main(int argc, char **argv)
     }
 
     /* make sure the file exists */
-    if (stat(filename, &sbuf) < 0) {
-      cerror(stream, filename, "404", "Not found", 
+    if (stat(filename, &sbuf) < 0) 
+    {
+
+fprintf(stream, "HTTP/1.1 200 OK\n");
+      fprintf(stream, "Server: Tiny Web Server\n");
+      fprintf(stream, "Content-length: %d\n", (int)sbuf.st_size);
+      fprintf(stream, "Content-type: %s\n", filetype);
+      fprintf(stream, "\r\n"); 
+      fflush(stream);
+fprintf(stream, "hello"); 
+
+      /*cerror(stream, filename, "404", "Not found", 
 	     "Tiny couldn't find this file");
       fclose(stream);
       close(childfd);
-      continue;
+      continue;*/
     }
 
     /* serve static content */
