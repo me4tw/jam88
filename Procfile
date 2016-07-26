@@ -1,1 +1,1 @@
-web: ./app $PORT
+web: sleep 3 && ./app $PORT
