@@ -1,1 +1,1 @@
-web: app $PORT
+web: bundle exec app $PORT
