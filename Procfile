@@ -1,1 +1,1 @@
-web: echo TESTLOGGING
+web: ls
