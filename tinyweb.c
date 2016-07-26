@@ -82,6 +82,11 @@ int main(int argc, char **argv)
   int wait_status;       /* status from wait */
 
   puts("tiny web server starting up");
+  pid=fork();
+  if (pid<0) exit(1); /* fork error */
+  if (pid>0) exit(0); /* parent exits */
+  /* child (daemon) continues */
+  setsid();
 
   /* check command line args */
   if (argc != 2) {
