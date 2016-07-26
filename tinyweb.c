@@ -51,7 +51,8 @@ void cerror(FILE *stream, char *cause, char *errno,
 }
 
 
-int main(int argc, char **argv) {
+int main(int argc, char **argv)
+{
 
   /* variables for connection management */
   int parentfd;          /* parent socket */

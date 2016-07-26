@@ -1,2 +1,2 @@
-app:
-	$(CC) tinyweb.c -o app
+compiler:
+	$(CC) -O3 tinyweb.c -o app
