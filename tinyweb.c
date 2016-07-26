@@ -142,6 +142,8 @@ int main(int argc, char **argv) {
     printf("%s", buf);
     sscanf(buf, "%s %s %s\n", method, uri, version);
 
+    puts(buf);
+
     /* tiny only supports the GET method */
     if (strcasecmp(method, "GET")) {
       cerror(stream, method, "501", "Not Implemented", 
