@@ -4,6 +4,6 @@
 
 
 
-system("gcc -v");
+system("find --help");
 
 ?>
